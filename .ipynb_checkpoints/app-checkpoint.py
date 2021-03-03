@@ -35,6 +35,8 @@ app.layout = html.Div([
         value='Horsepower',  # REQUIRED to show the plot on the first page load
         options=[{'label': col, 'value': col} for col in cars.columns])])
 
+server = app.server
+
 # Set up callbacks/backend
 @app.callback(
     Output('scatter', 'srcDoc'),
